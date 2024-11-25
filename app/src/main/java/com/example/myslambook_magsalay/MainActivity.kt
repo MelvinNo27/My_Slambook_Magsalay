@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myslambook_magsalay.databinding.ActivityMainBinding
+import kotlin.collections.List
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,11 +20,13 @@ class MainActivity : AppCompatActivity() {
         binding.btnCreate.setOnClickListener {
             val intent = Intent(this, Form1::class.java)
             startActivity(intent)
+            finish()
         }
 
         binding.btnView.setOnClickListener {
             val intent = Intent(this, List::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
