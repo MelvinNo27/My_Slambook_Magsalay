@@ -15,7 +15,7 @@
         android:theme="@style/Theme.MySlambook_Magsalay"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Form1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
         </activity>
 
         <activity
-            android:name=".Form1"
+            android:name=".Form2"
             android:exported="false"/>
         <activity
             android:name=".List"
@@ -33,6 +33,12 @@
 
         <activity
             android:name=".DetailsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Form3"
+            android:exported="false"/>
+        <activity
+            android:name=".Gender"
             android:exported="false"/>
 
     </application>

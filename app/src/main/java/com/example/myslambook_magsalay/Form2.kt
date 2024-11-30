@@ -3,27 +3,27 @@ package com.example.myslambook_magsalay
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myslambook_magsalay.databinding.ActivityMainBinding
+import com.example.myslambook_magsalay.databinding.ActivityForm2Binding
 import kotlin.collections.List
 
-class MainActivity : AppCompatActivity() {
+class Form2 : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityForm2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityForm2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnCreate.setOnClickListener {
-            val intent = Intent(this, Form1::class.java)
+            val intent = Intent(this, Gender::class.java)
             startActivity(intent)
             finish()
         }
 
-        binding.btnView.setOnClickListener {
+        binding.btnList.setOnClickListener {
             val intent = Intent(this, List::class.java)
             startActivity(intent)
             finish()

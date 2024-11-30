@@ -33,7 +33,7 @@ class DetailsActivity : AppCompatActivity() {
 
 
         binding.DetailsBackButton.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, Form2::class.java))
             finish()
         }
     }
