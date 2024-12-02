@@ -5,13 +5,13 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myslambook_magsalay.databinding.ActivityForm3Binding
+import com.example.myslambook_magsalay.databinding.ActivityFavoriteBinding
 import kotlin.collections.List
 
 
-class Form3 : AppCompatActivity() {
+class Favorite : AppCompatActivity() {
 
-    private lateinit var bindingForm: ActivityForm3Binding
+    private lateinit var bindingForm: ActivityFavoriteBinding
     private lateinit var sharedPreferences: SharedPreferences
 
 
@@ -22,7 +22,7 @@ class Form3 : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("MySlamBook", MODE_PRIVATE)
 
         // Use view binding to inflate Form1 and Profile layout
-        bindingForm = ActivityForm3Binding.inflate(layoutInflater)
+        bindingForm = ActivityFavoriteBinding.inflate(layoutInflater)
 
         // Display the Form1 (for user details) layout by default
         setContentView(bindingForm.root)
@@ -36,15 +36,15 @@ class Form3 : AppCompatActivity() {
         bindingForm.btnNext4.setOnClickListener {
             // Save user data in SharedPreferences
             val editor = sharedPreferences.edit()
-            editor.putString("firstName", bindingForm.firstName.text.toString())
-            editor.putString("lastName", bindingForm.lastName.text.toString())
-            editor.putString("email", bindingForm.email.text.toString())
-            editor.putString("address", bindingForm.address.text.toString())
-            editor.putString("contactNumber", bindingForm.contactNumber.text.toString())
-            editor.putString("friendsCallYou", bindingForm.friendsCallYou.text.toString())
+            editor.putString("movies", bindingForm.movies.text.toString())
+            editor.putString("Song", bindingForm.Song.text.toString())
+            editor.putString("Food", bindingForm.Food.text.toString())
+            editor.putString("Color", bindingForm.Color.text.toString())
+            editor.putString("Sports", bindingForm.Sports.text.toString())
+            editor.putString("Celebrity", bindingForm.Celebrity.text.toString())
             editor.apply()
 
-            startActivity(Intent(this, Favorite::class.java))
+            startActivity(Intent(this, Hobbies::class.java))
 
             // Show confirmation toast
             Toast.makeText(this, "User data submitted successfully!", Toast.LENGTH_SHORT).show()

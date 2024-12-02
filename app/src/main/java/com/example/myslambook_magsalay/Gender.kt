@@ -17,7 +17,7 @@ class Gender : AppCompatActivity() {
 
         // Male Button Click
         binding.btnMale.setOnClickListener {
-            val intent = Intent(this, Form3::class.java)
+            val intent = Intent(this, Profile::class.java)
             intent.putExtra("GENDER", "Male")  // Send gender to Form3
             startActivity(intent)
             finish()  // Finish current activity
@@ -25,7 +25,7 @@ class Gender : AppCompatActivity() {
 
         // Female Button Click
         binding.btnFemale.setOnClickListener {
-            val intent = Intent(this, Form3::class.java)
+            val intent = Intent(this, Profile::class.java)
             intent.putExtra("GENDER", "Female")  // Send gender to Form3
             startActivity(intent)
             finish()  // Finish current activity

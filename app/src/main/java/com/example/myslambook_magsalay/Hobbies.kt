@@ -5,13 +5,12 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myslambook_magsalay.databinding.ActivityForm3Binding
-import kotlin.collections.List
+import com.example.myslambook_magsalay.databinding.ActivityHobbiesBinding
 
 
-class Form3 : AppCompatActivity() {
+class Hobbies : AppCompatActivity() {
 
-    private lateinit var bindingForm: ActivityForm3Binding
+    private lateinit var bindingForm: ActivityHobbiesBinding
     private lateinit var sharedPreferences: SharedPreferences
 
 
@@ -22,7 +21,7 @@ class Form3 : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("MySlamBook", MODE_PRIVATE)
 
         // Use view binding to inflate Form1 and Profile layout
-        bindingForm = ActivityForm3Binding.inflate(layoutInflater)
+        bindingForm = ActivityHobbiesBinding.inflate(layoutInflater)
 
         // Display the Form1 (for user details) layout by default
         setContentView(bindingForm.root)
@@ -33,18 +32,18 @@ class Form3 : AppCompatActivity() {
     private fun setupForm3() {
 
         // Submit Button Click
-        bindingForm.btnNext4.setOnClickListener {
+        bindingForm.btnSubmit.setOnClickListener {
             // Save user data in SharedPreferences
             val editor = sharedPreferences.edit()
-            editor.putString("firstName", bindingForm.firstName.text.toString())
-            editor.putString("lastName", bindingForm.lastName.text.toString())
-            editor.putString("email", bindingForm.email.text.toString())
-            editor.putString("address", bindingForm.address.text.toString())
-            editor.putString("contactNumber", bindingForm.contactNumber.text.toString())
-            editor.putString("friendsCallYou", bindingForm.friendsCallYou.text.toString())
+            editor.putString("Hobbies", bindingForm.Hobbies.text.toString())
+            editor.putString("WhoInspiresYouTheMost", bindingForm.WhoInspiresYouTheMost.text.toString())
+            editor.putString("YourBiggestFear", bindingForm.YourBiggestFear.text.toString())
+            editor.putString("WhatMakesYouHappy", bindingForm.WhatMakesYouHappy.text.toString())
+            editor.putString("YourDreamDestination", bindingForm.YourDreamDestination.text.toString())
+            editor.putString("WhatsYourLuckyNumber", bindingForm.WhatsYourLuckyNumber.text.toString())
             editor.apply()
 
-            startActivity(Intent(this, Favorite::class.java))
+            startActivity(Intent(this, Form2::class.java))
 
             // Show confirmation toast
             Toast.makeText(this, "User data submitted successfully!", Toast.LENGTH_SHORT).show()
@@ -53,7 +52,7 @@ class Form3 : AppCompatActivity() {
 
         // Back Button Click for Form1
         bindingForm.backForm3Button.setOnClickListener {
-            startActivity(Intent(this, Form2::class.java))
+            startActivity(Intent(this, Favorite::class.java))
             finish()
         }
     }

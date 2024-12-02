@@ -40,6 +40,18 @@
         <activity
             android:name=".Gender"
             android:exported="false"/>
+        <activity
+            android:name=".Profile"
+            android:exported="false"/>
+        <activity
+            android:name=".Birthday"
+            android:exported="false"/>
+        <activity
+            android:name=".Hobbies"
+            android:exported="false"/>
+        <activity
+            android:name=".Favorite"
+            android:exported="false"/>
 
     </application>
 
