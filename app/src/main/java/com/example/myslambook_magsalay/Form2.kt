@@ -24,7 +24,7 @@ class Form2 : AppCompatActivity() {
         }
 
         binding.btnList.setOnClickListener {
-            val intent = Intent(this, List::class.java)
+            val intent = Intent(this, UserListActivity::class.java)
             startActivity(intent)
             finish()
         }

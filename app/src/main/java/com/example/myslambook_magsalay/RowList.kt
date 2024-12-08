@@ -20,5 +20,6 @@ class RowList : AppCompatActivity() {
             startActivity(Intent(this, DetailsActivity::class.java))
             finish()
         }
+
     }
 }

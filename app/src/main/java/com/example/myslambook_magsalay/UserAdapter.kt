@@ -1,6 +1,7 @@
 package com.example.myslambook_magsalay
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -30,9 +31,17 @@ class UserAdapter(
         if (imageUri != null) {
             holder.binding.profileImageView.setImageURI(Uri.parse(imageUri))
         } else {
-            holder.binding.profileImageView.setImageResource(R.drawable.avatar) // Default avatar
+            holder.binding.profileImageView.setImageResource(R.drawable.avatar)
+        }
+
+        // Handle click events to navigate to DetailsActivity
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, DetailsActivity::class.java)
+            intent.putExtra("userName", userName)
+            context.startActivity(intent)
         }
     }
+
 
     override fun getItemCount(): Int {
         return users.size

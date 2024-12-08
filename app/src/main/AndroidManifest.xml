@@ -28,7 +28,7 @@
             android:name=".Form2"
             android:exported="false"/>
         <activity
-            android:name=".List"
+            android:name=".UserListActivity"
             android:exported="false"/>
 
         <activity
@@ -52,6 +52,9 @@
         <activity
             android:name=".Favorite"
             android:exported="false"/>
+
+        <activity android:name=".RowList" />
+
 
     </application>
 
